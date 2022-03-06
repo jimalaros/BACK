@@ -21,9 +21,6 @@ router.post("/pago", async function (req, res) {
     email: "andrea@campanella.com",
   };
 
-  // TODO: get items from the database
-  const amount = req.body.amount;
-
   /**let items = [];
 
   for (let index = 0; index < names.length; index++) {
