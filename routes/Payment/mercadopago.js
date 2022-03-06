@@ -43,7 +43,6 @@ router.post("/pago", async function (req, res) {
     },
     items: req.body.items,
   };
-  console.log(items);
   // petición a mercado pago para preparar la compra
   preferences
     .create(preference)
