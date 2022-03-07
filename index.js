@@ -1,5 +1,5 @@
 import Express from "express";
-import expressJwt from "express-jwt";
+//import expressJwt from "express-jwt";
 import cors from "cors";
 import passport from "passport";
 import public_routes from "./routes/public.js";
@@ -8,7 +8,7 @@ import rutasOrdenes from "./routes/ordenes.js";
 import { conectarBD } from "./db/basededatos.js";
 import rutasUsuarios from "./routes/usuarios.routes.js";
 import auth_routes from "./routes/auth/index.js";
-import config from "./config.js";
+//import config from "./config.js";
 import "./services/index.js";
 
 const whiteList = ["https://apicommerce.tk", "https://api.apicommerce.tk"];
@@ -24,24 +24,24 @@ app.use(auth_routes);
 app.use(payment_routes);
 app.use(public_routes);
 
-app.use(
+/**app.use(
   expressJwt({
     secret: config.secret,
     algorithms: ["HS256"],
   }).unless({
     path: ["/Login", "/Registro"],
   })
-);
+);**/
 
 app.use("/", rutasUsuarios);
 
-app.use((err, req, res, _next) => {
+/**app.use((err, req, res, _next) => {
   if (err.name === "UnauthorizedError") {
     res.status(401).json("Token invalido");
   } else {
     res.status(500).json("Internal server error");
   }
-});
+});**/
 
 app.use("/ordenes", rutasOrdenes);
 
