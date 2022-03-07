@@ -7,8 +7,6 @@ dotenv.config();
 
 // 1) Configuarionces del Paypal
 // SDK de PayPal
-const paypal = require("@paypal/checkout-server-sdk");
-
 // Agrega credenciales
 // se usa SandboxEnvironment. Para producción, usar LiveEnvironment
 let environment = new paypal.core.SandboxEnvironment(
