@@ -1,6 +1,6 @@
 import { getDB } from "../db/basededatos.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import config from "../config.js";
 
 export async function Token(email, password) {
