@@ -4,7 +4,7 @@ import cors from "cors";
 import passport from "passport";
 import public_routes from "./routes/public.js";
 import payment_routes from "./routes/Payment/index.js";
-import rutasOrdenes from "./routes/ordenes/ordenes.js";
+import rutasOrdenes from "./routes/ordenes.js";
 import { conectarBD } from "./db/basededatos.js";
 import rutasUsuarios from "./routes/usuarios.routes.js";
 import auth_routes from "./routes/auth/index.js";
