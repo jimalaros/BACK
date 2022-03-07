@@ -9,7 +9,7 @@ const strategy_name = "google";
 
 router.get(
   `/${strategy_name}/auth`,
-  passport.authenticate(strategy_name, { session: false, scope: ["email"] })
+  passport.authenticate(strategy_name, { session: false, scope: ['user:email', 'read:user'] })
 );
 
 router.get(
