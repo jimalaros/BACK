@@ -2,13 +2,18 @@ FROM node:16-alpine
 
 RUN mkdir -p /usr/src/app
 
+# Create app directory
 WORKDIR /usr/src/app
 
+# Install app dependencies
 COPY package*.json ./
 
 RUN npm install
-RUN npm i -g pm2@latest
 
+#Install pm2
+RUN npm i -g pm2@latest 
+
+# Bundle app source
 COPY . .
 
-CMD ["pm2-runtime","start","index.js","--env","--watch"]
+CMD ["pm2","start","index.js","--watch"]

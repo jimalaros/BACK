@@ -19,9 +19,8 @@ router.get(
     failureRedirect: "/failed",
   }),
   function (req, res) {
-    console.log(`Peticion get /${strategy_name}/callback `);
     const data = req.user._json;
-    res.json(data);
+    res.json({ msg: `Peticion get /${strategy_name}/callback `, data });
     /**const token = "hgjsd8fs6g7s7df67g6sdf43sdg2s3df5sg6s7df7";
 
     const url_front = process.env.URL_FRONT + `/?token=${token}`;
