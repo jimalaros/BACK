@@ -17,7 +17,7 @@ Para iniciar sesión en [Amazon Web Services](https://aws.amazon.com/es/console/
 
 _Estas instrucciones te permitirán correr el proyecto y realizar las pruebas correspondientes._
 
-1. Descomprimir el archivo .zip y guardar el archivo .pem.
+1. Descomprimir el archivo .zip y guardar el archivo .pem, a su vez se debe crear un archivo .env al nivel del archivo index.js y copiar el contenido del archivo de texto llamado .env adjunto en el .zip, de lo contrario el proyecto no funcionará.
 
 2. Correr la terminal desde donde tengas descargado el archivo .pem, por ejemplo, si el archivo lo descargas en escritorio debes moverte a la carpeta de escritorio de la siguiente manera:
 
