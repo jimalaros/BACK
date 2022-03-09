@@ -16,4 +16,4 @@ RUN npm i -g pm2@latest
 # Bundle app source
 COPY . .
 
-CMD ["pm2","start","index.js","--watch"]
+CMD ["node","index.js"]
